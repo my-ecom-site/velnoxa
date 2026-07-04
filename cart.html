@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Velnoxa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <style>
+        .cart-page { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; }
+        
+        /* Left Side: Items */
+        .cart-left { flex: 2; background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); min-width: 300px; }
+        .cart-left h2 { margin-bottom: 20px; color: #1e293b; font-size: 24px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; }
+        .empty-cart-msg { font-size: 22px; color: #0f172a; font-weight: 600; padding: 20px 0; }
+
+        /* Right Side: Summary */
+        .cart-right { flex: 1; background: #fff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); min-width: 300px; position: sticky; top: 20px; }
+        .cart-right h3 { color: #64748b; font-size: 16px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px dashed #f1f5f9; padding-bottom: 15px; }
+        .summary-line { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; color: #475569; }
+        .summary-line.total { font-size: 18px; font-weight: 700; color: #0f172a; border-top: 2px dashed #f1f5f9; padding-top: 15px; margin-top: 10px; }
+        .savings { color: #10b981; font-size: 13px; font-weight: 600; margin-top: 10px; display: block; }
+
+        /* 🔥 Updated Proceed Button */
+        .checkout-btn { background: #f97316; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: background 0.3s; }
+        .checkout-btn:hover { background: #ea580c; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar" style="background-color: #0f172a; color: white; text-align: center; padding: 10px; font-size: 13px; font-weight: 600;">
+        🚚 Free Delivery on Orders Above ₹499 | Welcome to Velnoxa
+    </div>
+
+    <header>
+        <nav class="navbar">
+         <div class="nav-left">
+    <a href="../index.html" class="logo">
+        <img src="../images/logo.png" alt="Velnoxa Logo">
+    </a>
+</div>
+    <div class="nav-right">
+    <a href="../index.html" class="nav-icon-link">🏠 <span class="nav-text">Home</span></a>
+    
+    <a href="profile.html" class="nav-icon-link">👤 <span class="nav-text">Profile</span></a> 
+    <a href="wishlist.html" class="nav-icon-link">❤️ <span class="nav-text">Wishlist</span></a>
+    <a href="cart.html" class="nav-icon-link">🛒 <span id="cart-count">0</span></a>
+</div>
+        </nav>
+    </header>
+
+    <div class="cart-page">
+        <div class="cart-left">
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items-container">
+                <div class="empty-cart-msg">Your Cart is Empty 😔</div>
+            </div>
+        </div>
+
+        <div class="cart-right">
+            <h3>PRICE DETAILS</h3>
+            <div class="summary-line">
+                <span>Total Items</span>
+                <span id="summary-items">0</span>
+            </div>
+            <div class="summary-line">
+                <span>Delivery Charges</span>
+                <span style="color: #10b981; font-weight: 600;">FREE</span>
+            </div>
+            <div class="summary-line total">
+                <span>Total Amount</span>
+                <span id="summary-total">₹0</span>
+            </div>
+            <span class="savings">You will save ₹150 on this order</span>
+            
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+</body>
+</html>
+

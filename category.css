@@ -1,0 +1,91 @@
+/* ===== Categories Section ===== */
+.categories {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.categories h2 {
+    text-align: center;
+    font-size: 32px; /* Standard Heading size */
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* Responsive Grid Setup */
+.category-container {
+    display: grid;
+    /* auto-fit se mobile aur laptop par column apne aap adjust honge */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px;
+}
+
+/* Category Cards */
+.category-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .04); /* Soft Shadow */
+    transition: all .3s ease;
+    border: 1px solid #f1f5f9;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, .15);
+    border-color: #3b82f6; /* Hover par subtle blue border */
+}
+
+.category-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+    transition: transform 0.3s ease;
+}
+
+/* Card hover hone par image halki si zoom hogi */
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+.category-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* ===== Mobile & Tablet Screen Optimization ===== */
+@media (max-width: 768px) {
+    .categories {
+        margin: 40px auto;
+    }
+    
+    .categories h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    
+    .category-container {
+        /* Mobile par ek line me 2 category cards dikhenge */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .category-card {
+        padding: 20px 15px;
+    }
+    
+    .category-card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .category-card h3 {
+        font-size: 16px;
+    }
+}

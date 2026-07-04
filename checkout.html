@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Velnoxa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <style>
+        body { background-color: #f8fafc; }
+        .checkout-page { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; gap: 30px; flex-wrap: wrap; }
+        
+        /* Left Side: Form */
+        .checkout-form-container { flex: 2; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); min-width: 300px; }
+        .checkout-form-container h2 { margin-bottom: 20px; color: #1e293b; font-size: 22px; }
+        
+        .form-row { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .input-box { flex: 1; min-width: 200px; }
+        .input-box label { display: block; margin-bottom: 5px; font-size: 14px; font-weight: 600; color: #475569; }
+        .input-box input, .input-box select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 14px; box-sizing: border-box; }
+        .input-box input:focus, .input-box select:focus { border-color: #2563eb; }
+
+        /* Payment Methods */
+        .payment-methods { margin-top: 25px; }
+        .payment-option { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; }
+        .payment-option input { width: 18px; height: 18px; cursor: pointer; }
+
+        /* Right Side: Order Summary */
+        .order-summary { flex: 1; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); min-width: 300px; height: fit-content; }
+        .order-summary h3 { margin-bottom: 20px; color: #1e293b; border-bottom: 2px dashed #e2e8f0; padding-bottom: 10px; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; color: #475569; }
+        .total-row { font-size: 20px; font-weight: bold; color: #0f172a; border-top: 2px dashed #e2e8f0; padding-top: 15px; margin-top: 10px; }
+        
+        .place-order-btn { background: #10b981; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: 0.3s; }
+        .place-order-btn:hover { background: #059669; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Velnoxa Logo" style="height: 40px;"></a>
+            </div>
+            <div class="nav-right">
+                <a href="../index.html">🏠 Home</a>
+                <a href="wishlist.html">❤️ Wishlist</a>
+                <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="checkout-page">
+        <div class="checkout-form-container">
+            <h2>📍 Shipping Address</h2>
+            <form id="checkout-form">
+                <div class="form-row">
+                    <div class="input-box">
+                        <label>Full Name</label>
+                        <input type="text" id="chk-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="chk-mobile" placeholder="10-digit number" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                <div class="input-box" style="margin-bottom: 15px;">
+                    <label>Full Address (House No, Building, Street)</label>
+                    <input type="text" id="chk-address" placeholder="123, Main Street, Near XYZ" required>
+                </div>
+                <div class="form-row">
+                    <div class="input-box">
+                        <label>City</label>
+                        <input type="text" id="chk-city" placeholder="e.g. Mumbai" required>
+                    </div>
+                    <div class="input-box">
+                        <label>PIN Code</label>
+                        <input type="text" id="chk-pin" placeholder="e.g. 400001" pattern="[0-9]{6}" required>
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <h2>💳 Payment Method</h2>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="COD" checked>
+                        <span>Cash on Delivery (COD) 💵</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Card">
+                        <span>Credit / Debit Card 💳</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Total Items:</span>
+                <span id="chk-total-items">0</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Charges:</span>
+                <span style="color: #10b981; font-weight: bold;">FREE</span>
+            </div>
+            <div class="summary-row total-row">
+                <span>Amount to Pay:</span>
+                <span id="chk-total-amount">₹0</span>
+            </div>
+            <button type="submit" form="checkout-form" class="place-order-btn">🎉 Place Order</button>
+        </div>
+    </div>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

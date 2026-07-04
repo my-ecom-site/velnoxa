@@ -1,0 +1,105 @@
+/* ===== Newsletter Section ===== */
+.newsletter {
+    max-width: 1300px;
+    margin: 60px auto;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.newsletter p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Flexible Form Container */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto; /* Form ko center me alignment dene ke liye */
+}
+
+.newsletter-form input {
+    flex: 1; /* Input jitna space milega automatic stretch hoga */
+    max-width: 420px;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-form input:focus {
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4); /* Input active hone par smooth glow effect */
+}
+
+.newsletter-form button {
+    width: 150px;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    background: #f59e0b; /* Vibrant Yellow/Orange */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
+
+/* ===== Tablet & Mobile Screen Optimization ===== */
+@media (max-width: 768px) {
+    .newsletter {
+        margin: 40px 20px; /* Sides me thoda space mobile screens ke liye */
+        padding: 45px 20px;
+        border-radius: 20px;
+    }
+
+    .newsletter h2 {
+        font-size: 28px;
+    }
+
+    .newsletter p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Mobile par input aur button ek ke neeche ek aa jayenge */
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .newsletter-form input {
+        width: 100%; /* Mobile par poori width le lega */
+        max-width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%; /* Mobile par button bhi full width ho jayega jo professional lagta hai */
+    }
+}

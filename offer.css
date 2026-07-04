@@ -1,0 +1,95 @@
+/* ===== Offers Section ===== */
+.offers {
+    max-width: 1300px;
+    margin: 60px auto;
+    display: grid;
+    /* desktop par 3 boxes, baaki screens par responsive handle karega */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* Banner Base Style */
+.offer-card {
+    border-radius: 20px;
+    padding: 50px 30px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Contents ko left align rakhne ke liye */
+    justify-content: center;
+}
+
+.offer-card:hover {
+    transform: scale(1.03) translateY(-4px); /* Halka sa upar uthne ka dynamic animation */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Vibrant Modern Gradients */
+.offer1 {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.offer2 {
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+.offer3 {
+    background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+/* Texts Styles */
+.offer-card h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.offer-card p {
+    margin: 15px 0 25px 0;
+    font-size: 18px;
+    opacity: 0.9; /* Text ka overlay thoda smooth lagta hai */
+}
+
+/* Action Button Inside Banner */
+.offer-card button {
+    background: white;
+    color: #111827;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.offer-card button:hover {
+    background: #f3f4f6;
+    transform: translateY(-1px);
+}
+
+/* ===== Tablet & Mobile Screen Optimization ===== */
+@media (max-width: 768px) {
+    .offers {
+        margin: 40px auto;
+        gap: 15px;
+    }
+
+    .offer-card {
+        padding: 40px 25px;
+        border-radius: 16px;
+    }
+
+    .offer-card h2 {
+        font-size: 24px;
+    }
+
+    .offer-card p {
+        font-size: 16px;
+        margin: 10px 0 20px 0;
+    }
+}

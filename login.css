@@ -1,0 +1,115 @@
+/* ===== Login Page Section ===== */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    padding: 40px 20px;
+    background: #f8fafc; /* Soft background */
+}
+
+.login-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 45px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.login-container p {
+    color: #64748b;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+/* Form Elements */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Jab user type karne ke liye click karega toh blue glow aayega */
+.input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.forgot-pass {
+    text-align: right;
+    margin-top: -10px;
+}
+
+.forgot-pass a {
+    font-size: 13px;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Action Button */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #2563eb; /* Velnoxa theme blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.login-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Signup Link Area */
+.signup-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.signup-link a {
+    color: #f97316; /* Velnoxa theme orange */
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

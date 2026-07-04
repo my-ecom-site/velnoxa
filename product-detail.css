@@ -1,0 +1,161 @@
+/* ===== Product Detail Section ===== */
+.pro-detail {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+/* Left Side: Image */
+.pro-image {
+    width: 45%;
+}
+
+.pro-image img {
+    width: 100%;
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+/* Right Side: Info */
+.pro-info {
+    width: 55%;
+    padding-top: 20px;
+}
+
+.pro-info h6 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.pro-info h4 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.pro-info h2 {
+    font-size: 28px;
+    color: #10b981; /* Flipkart/Amazon Price Green */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.pro-info h2 del {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.pro-info .offer {
+    color: #ef4444; /* Red Offer Text */
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.pro-info .rating {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #fbbf24;
+}
+
+.pro-info .rating span {
+    color: #64748b;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Dropdown & Buttons */
+.size-select {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.qty-input {
+    width: 70px;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+.add-cart-btn {
+    padding: 14px 30px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+.buy-now-btn {
+    padding: 14px 30px;
+    background: #f97316; /* Orange Action Color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2);
+    transition: 0.3s;
+}
+
+.buy-now-btn:hover { background: #ea580c; transform: translateY(-2px); }
+
+/* Description */
+.pro-info h3 {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.pro-info p {
+    color: #64748b;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .pro-detail {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .pro-image, .pro-info {
+        width: 100%;
+    }
+    .action-buttons {
+        flex-wrap: wrap; /* Mobile par buttons ache se fit honge */
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Velnoxa</title>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .auth-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid #f1f5f9;
+        }
+
+        .auth-container h2 {
+            font-size: 26px;
+            color: #0f172a;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            box-sizing: border-box;
+        }
+
+        .input-group input:focus {
+            border-color: #3b82f6;
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+
+        .auth-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            margin-top: 10px;
+        }
+
+        .auth-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .auth-redirect {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .auth-redirect a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .auth-redirect a:hover {
+            color: #1e3a8a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <h2>Login to Velnoxa 🔐</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="login-mobile" placeholder="Enter registered mobile number" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            
+            <div class="input-group" id="login-otp-section" style="display: none;">
+                <label>Enter OTP</label>
+                <input type="text" id="login-otp" placeholder="Enter 4-digit OTP" maxlength="4">
+            </div>
+
+            <button type="button" id="login-send-otp" class="auth-btn">Get OTP</button>
+            <button type="submit" id="login-verify-btn" class="auth-btn" style="display: none; background: #10b981;">Login</button>
+        </form>
+      <p class="auth-redirect">New user? <a href="signup.html">Sign Up here</a></p>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

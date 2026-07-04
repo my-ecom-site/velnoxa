@@ -1,0 +1,193 @@
+/* ===== Cart Page Main Section ===== */
+.cart-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+.cart-section h2 {
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* 2-Column Layout for Cart */
+.cart-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Taaki dono column upar se shuru hon */
+}
+
+/* Left Side: Items List */
+.cart-items-wrapper {
+    flex: 1; /* Ye bachi hui poori jagah le lega (lagbhag 70%) */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Single Cart Product Styling */
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.cart-product:last-child {
+    border-bottom: none; /* Aakhri item ke neeche line nahi aayegi */
+}
+
+.cart-product img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+    padding: 5px;
+}
+
+.cart-product h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.cart-product p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #10b981;
+}
+
+/* Quantity Plus/Minus Buttons */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.qty-btn:hover {
+    background: #e2e8f0;
+}
+
+/* Remove Button */
+.remove-btn {
+    background: white;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Right Side: Bill Summary Card */
+.cart-summary {
+    width: 350px; /* Fix width for summary card */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Niche scroll karne par bill sath chalega */
+    top: 100px; 
+}
+
+.cart-summary h3 {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cart-summary hr {
+    border: none;
+    border-top: 1px dashed #cbd5e1;
+    margin: 15px 0;
+}
+
+.summary-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #334155;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 10px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    background: #f97316; /* Amazon/Flipkart style orange */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(249, 115, 22, 0.2);
+}
+
+.checkout-btn:hover {
+    background: #ea580c;
+}
+
+/* ===== Responsive Mobile View ===== */
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column; /* Mobile par bill items ke niche aayega */
+    }
+
+    .cart-summary {
+        width: 100%; /* Mobile par summary poori chaurai lega */
+        position: static;
+    }
+
+    .cart-product {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .cart-product img {
+        margin: 0 auto;
+    }
+}

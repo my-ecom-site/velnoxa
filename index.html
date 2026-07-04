@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velnoxa - Premium Shopping</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        🚚 Free Delivery on Orders Above ₹499 | Welcome to Velnoxa
+    </div>
+
+   <header>
+        <nav class="navbar">
+            <div class="nav-top-row">
+                <div class="nav-left">
+                    <a href="index.html" class="logo">
+                        <img src="./images/logo.png" alt="Velnoxa Logo">
+                    </a>
+                </div>
+
+            <div class="nav-right">
+    <a href="index.html" class="nav-icon-link">🏠 <span class="nav-text">Home</span></a>
+    
+    <a href="pages/profile.html" class="nav-icon-link">👤 <span class="nav-text">Profile</span></a> 
+    <a href="pages/wishlist.html" class="nav-icon-link">❤️ <span class="nav-text">Wishlist</span></a>
+    <a href="pages/cart.html" class="nav-icon-link">🛒 <span id="cart-count">0</span></a>
+</div>
+            </div>
+
+            <div class="nav-search-row">
+                <select id="cat-select">
+                    <option>All</option>
+                    <option>Fashion</option>
+                    <option>Groceries</option>
+                    <option>Electronics</option>
+                    <option>Mobiles</option>
+                </select>
+                <input type="text" placeholder="Search products, brands and more...">
+                <button type="button">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="slider-section">
+        <div class="slider-container" id="main-slider">
+            
+            <div class="slide active" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+                <div class="slide-content">
+                    <span class="slide-badge">⚡ Limited Time Offer</span>
+                    <h1>Mega Electronics Sale</h1>
+                    <p>Get up to 40% OFF on latest Wireless Headphones & Gadgets.</p>
+                    <button class="slide-btn" onclick="window.location.href='#product-container'">Shop Gadgets</button>
+                </div>
+                <div class="slide-image">
+                    <img src="images/headphones.png" alt="Electronics Sale">
+                </div>
+            </div>
+
+            <div class="slide" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); color: #1e293b;">
+                <div class="slide-content">
+                    <span class="slide-badge" style="background: #2563eb; color: white;">🔥 Trending Fashion</span>
+                    <h1 style="color: #1e40af;">Upgrade Your Style</h1>
+                    <p style="color: #3b82f6;">Min. 50% OFF on Premium T-Shirts & Casual Wear.</p>
+                    <button class="slide-btn" style="background: #2563eb;" onclick="window.location.href='#trending-container'">Explore Style</button>
+                </div>
+                <div class="slide-image">
+                    <img src="images/shirt.png" alt="Fashion Sale">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-container">
+            <div class="category-box">
+                <div class="cat-icon">📱</div>
+                <span>Mobiles</span>
+            </div>
+            <div class="category-box">
+                <div class="cat-icon">👕</div>
+                <span>Fashion</span>
+            </div>
+            <div class="category-box">
+                <div class="cat-icon">🎧</div>
+                <span>Electronics</span>
+            </div>
+            <div class="category-box">
+                <div class="cat-icon">🛒</div>
+                <span>Groceries</span>
+            </div>
+            <div class="category-box">
+                <div class="cat-icon">👟</div>
+                <span>Footwear</span>
+            </div>
+            <div class="category-box">
+                <div class="cat-icon">🧸</div>
+                <span>Toys</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us-section">
+        <h2 class="section-title">Why Choose Velnoxa?</h2>
+        <div class="why-container">
+            <div class="why-card">
+                <div class="icon">🚚</div>
+                <h3>Free Delivery</h3>
+                <p>Free shipping on orders above ₹499.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🛡️</div>
+                <h3>Secure Payment</h3>
+                <p>100% safe and secure online payment.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🔄</div>
+                <h3>Easy Returns</h3>
+                <p>7 Days easy return policy.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">⭐</div>
+                <h3>Top Quality</h3>
+                <p>Only premium quality products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title">Featured Products</h2>
+        <div id="product-container">
+            </div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title">🔥 Trending Products</h2>
+        <div id="trending-container">
+            <div class="product-card">
+                <span class="discount">-30%</span>
+                <button class="wishlist-btn" data-id="1" onclick="toggleWishlist(1)">🤍</button>
+                <a href="pages/product-detail.html?id=1" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="images/shirt.png" alt="T-Shirt">
+                    <h3>Premium T-Shirt</h3>
+                </a>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">₹699</p>
+                <button class="add-cart" data-id="1">Add To Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <span class="discount">-20%</span>
+                <button class="wishlist-btn" data-id="3" onclick="toggleWishlist(3)">🤍</button>
+                <a href="pages/product-detail.html?id=3" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="images/headphones.png" alt="Headphones">
+                    <h3>Wireless Headphones</h3>
+                </a>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">₹1999</p>
+                <button class="add-cart" data-id="3">Add To Cart</button>
+            </div>
+
+            <div class="product-card">
+                <span class="discount">-15%</span>
+                <button class="wishlist-btn" data-id="4" onclick="toggleWishlist(4)">🤍</button>
+                <a href="pages/product-detail.html?id=4" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="images/mobile.png" alt="Mobile">
+                    <h3>Smartphone</h3>
+                </a>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">₹14999</p>
+                <button class="add-cart" data-id="4">Add To Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <span class="discount">-10%</span>
+                <button class="wishlist-btn" data-id="2" onclick="toggleWishlist(2)">🤍</button>
+                <a href="pages/product-detail.html?id=2" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="images/rice.png" alt="Rice">
+                    <h3>Basmati Rice</h3>
+                </a>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="price">₹599</p>
+                <button class="add-cart" data-id="2">Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-box">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to get latest offers and new arrivals.</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your Email">
+                <button type="button">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>VELNOXA</h3>
+                <p>Your One Stop Shopping Destination.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 VELNOXA. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div id="toast-box"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

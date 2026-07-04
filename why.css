@@ -1,0 +1,99 @@
+/* ===== Why Choose Us Section ===== */
+.why-us {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.why-us h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* Flexible Grid Setup */
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Trust Cards */
+.why-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .04);
+    border: 1px solid #f1f5f9;
+    transition: all .3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, .12);
+    border-color: #bfdbfe; /* Subtle blue tint border on hover */
+}
+
+/* Emojis / Icons */
+.icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Card hover hone par icon thoda scale up hoga */
+.why-card:hover .icon {
+    transform: scale(1.1);
+}
+
+.why-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== Mobile & Tablet Screen Responsiveness ===== */
+@media (max-width: 768px) {
+    .why-us {
+        margin: 40px auto;
+    }
+    
+    .why-us h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    
+    .why-container {
+        /* Tablet/Mobile par 2 rows me perfect layout */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .why-card {
+        padding: 25px 15px;
+        border-radius: 14px;
+    }
+    
+    .icon {
+        font-size: 35px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-container {
+        /* Chote mobile screens par line-by-line single column */
+        grid-template-columns: 1fr;
+    }
+}

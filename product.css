@@ -1,0 +1,118 @@
+/* ===== Featured Products Section ===== */
+.products {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* Responsive Grid Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card */
+.product-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .04);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    position: relative; /* Badge ko corner me alignment dene ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    border-color: #cbd5e1;
+}
+
+/* Absolute Discount Badge (Flipkart Style) */
+.product-card .discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ef4444; /* Premium red color */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* Product Image Alignment */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 15px auto;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* Image zoom on hover */
+}
+
+/* Product Title */
+.product-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #1e293b;
+}
+
+/* Star Ratings Scope Fix */
+.product-card .rating {
+    color: #fbbf24;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* Price Scope Fix */
+.product-card .price {
+    color: #10b981; /* Flipkart/Myntra standard green price text */
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+}
+
+/* Action Button */
+.product-card button.add-cart {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.product-card button.add-cart:hover {
+    background: #1d4ed8;
+}
+
+/* Small Screens Tablet/Mobile Tweak */
+@media (max-width: 500px) {
+    .product-container {
+        grid-template-columns: 1fr; /* Mobile par automatic single grid row */
+        gap: 20px;
+    }
+}
